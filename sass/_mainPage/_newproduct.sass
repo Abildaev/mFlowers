@@ -1,0 +1,91 @@
+.products__product-new
+    width: 100%
+    margin-bottom: 0
+    box-sizing: border-box
+
+
+.newproduct
+    padding: rem(35px) 0
+    box-sizing: border-box
+
+    &__wrap
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        +laptop
+            flex-direction: row
+
+    &__text
+        position: relative
+        box-sizing: border-box
+        color: $whiteColor
+        padding: rem(50px) rem(30px)
+        background: $mainColor
+        +laptop
+            width: 25%
+
+    &__title
+        text-transform: uppercase
+
+    &__subtitle
+        line-height: rem(24px)
+
+
+    &__products
+        position: relative
+        box-sizing: border-box
+        padding: rem(30px) 0 0
+        background: $whiteColor
+        +laptop
+            width: 75%
+            padding: rem(30px) rem(45px) 0
+
+        &.owl-theme .owl-dots .owl-dot span
+            display: none
+
+    .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot span
+        width: rem(40px)
+        height: rem(40px)
+        background: #e8e8e8
+        color: #a9a9a9
+        border-radius: 50%
+        font-size: rem(30px)
+        box-sizing: border-box
+        outline: none
+        
+
+    .owl-nav button.owl-next
+        position: absolute
+        z-index: 2
+        top: 40%
+        right: -20px
+    
+    .owl-nav button.owl-prev
+        position: absolute
+        z-index: 2
+        top: 40%
+        left: -20px
+        
+    &__subtitle
+        position: relative
+        z-index: 1
+        color: #737373
+
+    &__uzor
+        position: absolute
+        bottom: 0
+        left: 0
+        &-two
+            position: absolute
+            bottom: 0
+            right: 0
+
+    &__photo
+        max-width: rem(240px)
+        height: rem(300px)
+
+
+    &__wrap-reverse
+        +laptop
+            flex-direction: row-reverse
+

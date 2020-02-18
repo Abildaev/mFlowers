@@ -1,0 +1,356 @@
+.basket
+    padding: rem(70px) 0
+    outline: none
+
+    &__wrap
+        padding: rem(40px)
+        background: #fff
+        box-sizing: border-box
+
+    &__title-main
+        font-size: rem(24px)
+        margin-bottom: rem(40px)
+
+    &__titles
+        width: 100%
+        display: none
+        +tablet 
+            display: flex
+            padding: 0 0 rem(16px)
+            border-bottom: 1px solid #f0f0f0
+
+    &__product
+        box-sizing: border-box
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-bottom: rem(50px)
+        +tablet 
+            flex-wrap: nowrap
+            padding:  rem(16px) 0
+            border-bottom: 1px solid #f0f0f0
+            margin-bottom: 0
+
+    &__product:last-child
+        margin-bottom: 0
+
+    &__foto
+        width: 100%
+        margin-bottom: rem(20px)
+        +phone
+            width: 33%
+            margin: 0
+        
+
+    &__name
+        width: 100%
+        border-bottom: 1px solid #f0f0f0
+        +tablet 
+            border-bottom: none
+        span 
+            font-size: rem(14px)
+            font-weight: 600
+            text-transform: uppercase
+        
+
+        +phone
+            width: 67%
+            span 
+                display: none
+        +tablet
+            width: 50%
+            padding:  0 rem(20px)
+            box-sizing: border-box
+            display: flex
+            align-items: center
+
+    &__adaptive
+        box-sizing: border-box
+        width: 100%
+        border-bottom: 1px solid #f0f0f0
+            
+        span 
+            font-weight: 600
+            font-size: rem(14px)
+            text-transform: uppercase
+            margin-right: rem(15px)
+        +tablet
+            border-bottom: none
+            display: flex
+            align-items: center
+            width: 30%
+            span 
+                display: none
+
+    &__title-foto
+        +phone
+            width: 33%
+
+    &__title-name
+        font-size: rem(14px)
+        text-transform: uppercase
+        font-weight: 600
+        +phone
+            width: 67%
+            padding:  0 rem(20px)
+            box-sizing: border-box
+        +tablet
+            width: 50%
+
+    
+            
+    &__title
+        font-weight: 600
+        font-size: rem(14px)
+        text-transform: uppercase
+        +tablet
+            width: 30%
+
+    &__input
+        border: none
+        background: none
+        font-family: $numeralFont
+        font-size: rem(16px)
+        font-weight: 600
+        width: 60%
+        margin: rem(20px) 0
+
+    &__input-name
+        color: $basketColorLight
+        font-family: $mainFont
+        font-weight: 400
+        width: 100%
+
+    &__input-amount
+        width: rem(40px)
+        height: rem(40px)
+        text-align: center
+        box-sizing: border-box
+        border: 1px solid $borderColor
+
+    &__btns
+        display: inline-flex
+        flex-direction: column
+        button
+            background: none
+            border: none
+            font-size: rem(16px)
+            position: relative
+            bottom: rem(10px)
+            +tablet
+                bottom: 0
+        
+    &__input-total
+        font-weight: 400
+        color: $basketColorLight
+        
+
+    &__btn-del
+        display: block
+        margin-left: auto
+        background: none
+        border: 1px solid $borderColor
+        box-sizing: border-box
+        width: rem(40px)
+        height: rem(40px)
+        +tablet 
+            margin: 0 auto
+
+    &__delete
+        padding: rem(20px) 0 
+        +tablet 
+            margin: 0
+
+    &__img
+        width: rem(95px)
+        height: rem(110px)
+        overflow: hidden
+        background: #ccc
+        +tablet
+            margin: 0 auto
+
+    &__btns-main
+        border-bottom: 1px solid #f0f0f0
+        padding: rem(20px) 0
+        display: flex
+        flex-direction: column
+        margin-bottom: rem(40px)
+        +phone
+            width: 60%
+            margin: 0 auto rem(40px)
+        +tablet
+            width: 100%
+            flex-direction: row
+            justify-content: space-between
+    
+    &__continue
+        display: inline-block
+        text-align: center
+        transition: 0.5s
+        background: $mainColor
+        padding: rem(15px) rem(10px)
+        box-sizing: border-box
+        text-transform: uppercase
+        color: $whiteColor
+        border: 1px solid $mainColor
+        font-size: rem(14px)
+        margin-bottom: rem(25px)
+        +phone
+            padding: rem(15px) rem(20px)
+        +tablet
+            margin-bottom: 0
+            margin-left: rem(10px)
+
+    &__continue:hover
+        background: none
+        border: 1px solid $borderColor
+        color: $subtitleColor
+
+    &__clear
+        transition: 0.5s
+        background: none
+        display: block
+        border: 1px solid $borderColor
+        color: $subtitleColor
+        box-sizing: border-box
+        text-transform: uppercase
+        padding: rem(15px) rem(10px)
+        font-size: rem(14px)
+        +phone
+            padding: rem(15px) rem(32px)
+        +tablet 
+            margin-right: rem(10px)
+
+    &__clear:hover
+        background: $mainColor
+        border: 1px solid $mainColor 
+        color: $whiteColor
+
+    &__makeshop
+        font-size: rem(14px)
+        transition: 0.5s
+        display: inline-block
+        border: 1px solid $borderColor
+        padding: rem(15px) rem(30px)
+        box-sizing: border-box
+        text-transform: uppercase
+        color: $subtitleColor
+
+    &__makeshop:hover
+        border: 1px solid $mainColor
+        color: $whiteColor
+        background: $mainColor
+
+    &__none      
+        div
+            color: #838383
+            margin-bottom: rem(30px)
+
+
+    &__total-wrap
+        width: 100%
+        margin-left: auto
+        +tablet
+            max-width: rem(450px)
+
+    
+    
+    &__total-title
+        text-transform: uppercase 
+        font-weight: 600
+        font-size: rem(16px)
+        margin-bottom: rem(30px)
+
+    &__info
+        margin-bottom: rem(30px)   
+        +tablet  
+            display: flex
+            justify-content: flex-start
+      
+        span
+            box-sizing: border-box
+            display: block
+            font-weight: 600
+            margin-bottom: rem(20px)
+            +tablet            
+                margin-bottom: 0
+                
+          
+         
+
+    
+
+    &__total-resident
+        display: block    
+        font-family: $numeralFont
+        color: #838383
+        font-size: rem(16px)
+        background: none
+        border: none
+        +tablet  
+            margin-left: rem(30px)
+            
+
+    &__total-order
+        display: block      
+        font-family: $numeralFont
+        color: $titleColor
+        font-size: rem(16px)
+        background: none
+        border: none
+        font-weight: 600
+        +tablet  
+            margin-left: rem(60px)
+    &__delivery
+        color: #838383
+        strong
+            color: $titleColor
+            font-family: $numeralFont
+
+    &__radios
+        display: flex
+        flex-direction: column
+        +tablet  
+            margin-left: rem(124px)
+            
+
+    &__radio
+        display: inline-flex
+        margin-bottom: rem(20px)
+
+    &__radio:last-child
+        margin-bottom: 0
+
+    &__btn-pay
+        transition: .5s
+        font-size: rem(16px)
+        box-sizing: border-box
+        text-transform: uppercase
+        font-weight: 600
+        color: $whiteColor
+        background: #070000
+        border: none
+        padding: rem(20px) rem(30px)
+        display: block
+        margin: rem(10px) auto 0
+        +tablet 
+            margin: rem(10px) 0 0 auto
+        &:hover
+            background: $mainColor
+
+  
+    
+
+#free
+    margin: 0 rem(10px) 0 0
+    width: rem(18px)
+    height: rem(18px)
+
+#paid
+    margin: 0 rem(10px) 0 0
+    width: rem(18px)
+    height: rem(18px)
+
+    
+
+

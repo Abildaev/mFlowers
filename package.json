@@ -1,0 +1,11 @@
+{
+  "name": "mFlowersFrontEnd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "easyzoom": "^2.5.2",
+    "jquery": "^3.4.1",
+    "owl.carousel": "^2.3.4"
+  }
+}

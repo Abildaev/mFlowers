@@ -1,0 +1,141 @@
+.products
+
+    &__group
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        +tablet
+            justify-content: space-between
+
+    &__product
+        width: 100%
+        font-family: $mainFont
+        display: flex
+        justify-content: center
+        flex-direction: column
+        align-items: center
+        text-align: center
+        margin-bottom: rem(35px)
+        +tablet 
+            width: 49%
+        +laptop
+            width: 33%
+        +desktop
+            width: 25%
+    
+    &__product-new
+        margin-bottom: 0
+
+    
+    .owl-carousel.owl-loaded
+        display: flex
+        flex-direction: column-reverse
+
+    &__icon
+        opacity: 0
+        z-index: 2
+        color: $whiteColor
+        font-size: rem(22px)
+        +center
+
+
+    &__photo
+        margin: 0 0 rem(25px)
+        position: relative  
+        background: #ccc
+        transition: 0.5s
+        overflow: hidden
+        width: 100%
+        max-width: rem(265px)
+        height: rem(300px)
+        &:hover
+            &:after
+                content: ''
+                position: absolute
+                top: 0
+                left: 0   
+                width: 100%
+                max-width: rem(265px)
+                height: rem(300px)
+                background: rgba(25, 25, 25, .5)
+            .products__icon
+                opacity: 1
+
+    
+
+    &__name
+        color: $subtitleColor    
+        font-size: rem(18px)
+        margin-bottom: rem(15px)
+
+    &__price
+        font-weight: bold
+        font-size: rem(18px)
+        font-family: $numeralFont
+        margin-bottom: rem(15px)
+
+    &__button
+        border: 1px solid $borderColor
+        color: $subtitleColor
+        transition: 0.5s
+        font-size: rem(18px)
+        text-transform: uppercase
+        box-sizing: border-box
+        padding: rem(17px) rem(50px)
+        background: rgba(255, 255, 255, 0)
+
+    &__button:hover
+        border: 1px solid rgba(186, 186, 186, 0)
+        background: $mainColor
+        color: $whiteColor
+    
+    
+.products__slider 
+    &.owl-theme .owl-dots
+        text-align: left
+        display: flex
+        flex-direction: column
+        margin-bottom: rem(50px)
+        +tablet
+           flex-direction: row 
+
+    .owl-dot
+        margin-bottom: rem(15px)
+        outline: none
+        +tablet
+            margin-right: rem(15px)
+
+    &.owl-theme .owl-dots .owl-dot span
+        display: none
+    .owl-dot.active
+        font-weight: 600
+        color: $mainColor
+
+    & .owl-dot:after
+        font-family: $mainFont
+        text-transform: uppercase
+        font-size: rem(18px)
+    
+    & .owl-dot:nth-child(1):after
+        content: "Популярное"
+    
+    & .owl-dot:nth-child(2):after
+        content: "домашние"
+    
+    & .owl-dot:nth-child(3):after
+        content: "экзотичные"
+
+    & .owl-dot:nth-child(4):after
+        content: "кактусы"
+
+
+
+
+
+   
+  
+
+
+
+
+

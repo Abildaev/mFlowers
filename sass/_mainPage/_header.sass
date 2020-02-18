@@ -1,0 +1,344 @@
+.header
+    padding: rem(20px) 0 0
+    font-family: $mainFont
+    position: relative
+    background: $whiteColor
+    
+
+
+
+    &__head
+        display: none
+        +laptop
+            margin-bottom: rem(30px)
+            display: flex
+            font-size: rem(14px)
+            justify-content: space-between
+
+        
+    &__crumbs
+        flex-grow: 1
+        text-align: right
+        & a
+            color: $subtitleColor
+            margin-left: rem(15px)
+
+    &__number
+        font-size: rem(16px)
+        margin-left: rem(18px)
+        color: $subtitleColor
+        & a
+            margin-left: rem(5px)
+            font-family: $numeralFont
+            font-size: rem(16px)
+            color: $titleColor
+
+    &__languages
+        position: relative
+        display: flex
+        align-items: center
+
+    &__list-language
+        position: absolute
+        top: rem(15px)
+        left: 0
+            
+            
+
+
+    &__nav
+        margin-bottom: rem(20px)
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        +tablet 
+            margin-bottom: rem(30px)
+
+    
+    &__navigation
+        display: none
+        +tablet
+            margin-top: rem
+            position: relative
+            padding: rem(27px)
+            display: flex
+            justify-content: center
+            background: $lightColor
+            box-sizing: border-box
+            text-transform: uppercase
+            font-weight: 600
+
+    &__home-link
+        position: absolute
+        left: 0
+        top: 0
+        padding: rem(27px)
+        color: $whiteColor
+        background: $mainColor
+        font-size: rem(20px)
+    
+    
+
+
+
+    &__logo
+        margin: 0 auto
+        max-width: rem(120px)
+        width: 100%
+        +tablet 
+            max-width: rem(160px)
+
+    &__icon-shoping
+        font-size: rem(24px)
+        color: $mainColor
+        +tablet
+            background: $lightColor
+            padding: rem(10px)
+            box-sizing: border-box
+            font-size: rem(30px)
+            
+
+    &__underline
+        width: 100%
+        height: rem(5px)
+        background-color: $mainColor
+
+    &__menu
+        transition: 0.5s
+        width: 90%
+        padding: rem(15px)
+        position: fixed
+        overflow-y: scroll
+        height: 100vh
+        left: -100%
+        top: 0
+        background-color: #222222
+        +phone
+            width: 60%
+        +tablet 
+            display: none
+
+
+        &.is-active
+            left: 0
+
+    &__list
+        width: 87%
+        font-size: rem(16px)
+        text-transform: uppercase
+        font-family: $mainFont
+        margin-bottom: rem(15px) 
+        
+    
+    &__link
+        display: inline-block
+        box-sizing: border-box
+        border: 1px solid $borderColor
+        width: 100%
+        padding: rem(7px)
+        color: $whiteColor
+        &.header__link-home
+            font-size: rem(20px)
+            background: $mainColor
+            border: solid 0px $borderColor 
+
+    &__list-drop
+        display: flex
+        color: $whiteColor
+        align-items: center
+
+    &__buton-drop
+        padding: rem(7px)
+        box-sizing: border-box
+        border: 1px solid $borderColor
+
+    
+
+
+
+    
+
+    &__search
+        width: 100%
+        display: flex
+
+
+        &-input
+            width: 100%
+            padding: rem(13px)
+            border: none
+        &-button
+            border: none
+            color: $whiteColor
+            background: $mainColor
+            padding: rem(13px)
+            & span
+                font-size: rem(18px)
+
+
+        &-desctop
+            display: none
+            +tablet
+                display: block
+                max-width: rem(300px)
+
+    &__submenu
+        display: none
+        
+
+    &__submenu.is-active
+        display: block
+
+    &__sublist
+        margin: rem(20px)
+        margin-bottom: rem(10px)
+        & a
+            color: $whiteColor
+
+    &__basket
+        +tablet 
+            display: flex
+            align-items: center
+
+        &-info
+            display: none
+            +tablet 
+                padding: rem(17px) 
+                background: $mainColor
+                color: $whiteColor
+                font-family: $numeralFont
+                display: block
+
+
+
+        
+
+    &__button-close
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: rem(18px)
+        font-family: $mainFont
+        font-weight: 600
+        color: $whiteColor
+        z-index: 2
+        position: absolute
+        width: rem(30px)
+        height: 100vh
+        right: 0
+        top: 0      
+        background: $mainColor
+
+    &__search-desctop
+        display: none
+        +tablet 
+            display: flex
+
+    &__search-input-desctop 
+        border: none
+        background: $lightColor
+        box-sizing: border-box 
+        padding: rem(15px)
+
+    &__search-button-desctop
+        transition: 0.5s
+        border: none
+        box-sizing: border-box 
+        background: $mainColor
+        font-size: ren(40px)
+        padding: rem(15px)
+        &:hover
+            background: $titleColor
+        & span
+            color: $whiteColor
+            font-size: rem(16px)
+
+    &__list-desktop
+        position: relative
+        margin-left: 2.7%
+        &:hover
+            & .header__drop
+                visibility: visible
+                opacity: 1
+
+    &__link-desktop
+        color: $titleColor
+
+    &__drop
+        visibility: hidden
+        opacity: 0
+        transition: 1s
+        display: flex
+        flex-wrap: wrap
+        width: rem(400px)
+        position: absolute
+        z-index: 2
+        background: #ffffff
+        padding: rem(20px)
+        left: 0
+        top: rem(52px)
+
+    
+
+    &__sublist-desktop
+        width: 50%
+        margin-bottom: rem(15px)
+
+        & a
+            transition: 0.5s
+            font-size: rem(14px)
+            color: $titleColor
+            font-weight: 400
+            border-bottom: 1px solid rgba(14, 0, 0, 0)
+            &:hover
+                border-bottom: 1px solid rgba(14, 0, 0, 1)
+
+    
+    
+
+
+
+   
+
+
+        
+
+
+
+
+.hamburger_trigger
+  position: relative
+  width: rem(25px)
+  height: rem(25px)
+  margin-left: rem(10px)
+  +tablet
+    display: none
+
+.hamburger_trigger span,
+.hamburger_trigger span:before,
+.hamburger_trigger span:after
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: rem(3px)
+  background: $mainColor
+  border-radius: rem(5px)
+  transition: linear 0.2s
+
+.hamburger_trigger span:before,
+.hamburger_trigger span:after
+  content: ' '
+  display: block
+
+.hamburger_trigger span:before
+  transform: translateY(18px)
+
+.hamburger_trigger span:after
+  transform: translateY(9px)
+
+
+
+
+   

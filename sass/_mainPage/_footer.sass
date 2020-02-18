@@ -1,0 +1,230 @@
+.footer
+
+
+    &__services
+        color: $whiteColor
+        padding: rem(25px) 0
+        background: $mainColor
+
+
+        &-group
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+
+    &__service
+        width: 100%
+        display: flex
+        align-items: center
+        margin-bottom: rem(20px)
+        +phone
+            width: 49%
+        +laptop
+            width: 24%
+            margin-bottom: 0
+
+    &__service:last-child
+        margin-bottom: 0
+
+    &__service:nth-child(3)
+        +phone
+            margin-bottom: 0
+
+
+    &__icon
+        margin-right: rem(15px)
+        font-size: rem(30px)
+
+    &__name
+        text-transform: uppercase
+        font-weight: 600
+
+
+    &__foot
+        box-sizing: border-box
+        padding: rem(50px) 0 
+        background: $footerColor
+
+    &__navs
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+
+    &__nav
+        width: 100%
+        list-style-position: inside
+        list-style-type: circle
+        margin-bottom: rem(50px)
+        +tablet 
+            width: 30%
+        +desktop
+            width: 20%
+            margin-bottom: 0
+
+    &__nav:first-child
+        +tablet 
+            width: 40%
+        +desktop
+            width: 29%
+
+    &__nav:last-child
+        margin-bottom: 0
+   
+
+    &__link-title
+        color: $titleColor
+        text-transform: uppercase
+        list-style-type: none
+        font-weight: 600
+        margin-bottom: rem(18px)
+
+    &__list
+        margin-bottom: rem(15px)
+        color: $subtitleColor
+        & a
+            color: $subtitleColor
+
+    &__form-ul
+        list-style-type: none
+        +tablet 
+            width: 60%
+        +desktop
+            width: 30%
+    
+    &__form-social
+        list-style-type: none
+        +tablet 
+            width: 40%
+        +desktop
+            margin-left: auto
+            width: 30%
+            margin-top: rem(-50px)
+
+
+    &__email
+        display: flex
+        width: 100%
+        +phone
+            width: 70%
+        +desktop
+            width: 100%
+
+    &__input
+        width: 58%
+        border: none
+        box-sizing: border-box
+        padding: rem(15px) rem(8px)
+
+        @include placeholder()
+            font-family: $mainFont
+            font-size: rem(16px)
+
+    &__btn
+        color: #737373
+        text-transform: uppercase
+        width: 42%
+        box-sizing: border-box
+        border: none
+        font-size: rem(14px)
+        background: $mainColor
+        padding: rem(15px) 0
+
+    &__socialnets
+        margin-bottom: rem(15px)
+
+
+    &__social
+        transition: 0.5s
+        margin-right: rem(10px)
+        display: inline-block
+        position: relative
+        align-items: center
+        justify-content: center
+        color: $subtitleColor
+        width: rem(40px)
+        height: rem(40px)
+        border: 1px solid $borderColor
+
+    &__social:hover.facebook
+        background: #3b5998
+        border: 1px solid #3b5998
+        color: $whiteColor
+
+    &__social:hover.instagram
+        background: #e1306c
+        border: 1px solid #e1306c
+        color: $whiteColor
+
+
+    &__social-icon
+        +center
+        
+    &__img
+        margin-right: rem(10px)
+
+    &__line
+        width: 100%
+        height: 1px
+        background: #dddddd
+        margin: rem(35px) 0
+
+    &__logo
+        display: block
+        margin: 0 auto
+        width: 100%
+        max-width: rem(235px)
+        margin-bottom: rem(35px)
+
+    &__contacts
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: flex-start
+
+
+    &__contact
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        color: $subtitleColor
+        margin-bottom: rem(35px)
+        +tablet 
+            width: 32%
+            margin-bottom: 0
+            
+
+    &__contact:last-child
+        margin-bottom: 0
+
+
+    &__pic
+        position: relative
+        display: inline-block
+        width: rem(45px)
+        height: rem(45px)
+        border-radius: 50%
+        border: 1px solid $borderColor
+        margin-bottom: rem(15px)
+
+        & span 
+            font-size: rem(24px)
+            +center
+
+    &__tel
+        display: block
+        font-family: $numeralFont
+        color: $subtitleColor
+
+    &__tel:hover
+        color: $titleColor
+
+    &__rights
+        text-align: center
+        color: $subtitleColor
+        font-size: rem(14px)
+        width: 100%
+        padding: rem(15px) 0
+        background: #dedcdc
+        

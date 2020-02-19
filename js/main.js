@@ -24,7 +24,8 @@ $(document).ready(function () {
 
    
 
-    function getTotalResident () {
+    function getTotalResident (e) {
+        
         let summ = 0;
         let pricedelivery = parseInt($(`.basket__radio-input[checked="checked"]`).val());
         $(".basket__input-total").each(function() {
@@ -58,6 +59,7 @@ $(document).ready(function () {
     basketBtnMinus.on("click", changeAmount);
     
     basketAmount.change(function () {
+        
         if($(this).val() <= 0) {
             $(this).val(1)       
         }
@@ -94,6 +96,8 @@ $(document).ready(function () {
         
     });
 
+// страница информация о товаре
+
 
     var $easyzoom = $('.easyzoom').easyZoom();
 
@@ -122,11 +126,38 @@ $(document).ready(function () {
 				$this.text("Switch off").data("active", true);
 				api2._init();
 			}
-		});
-    
+        });
+        
+function changeCounter (event) {
+    const innerHtml = event.currentTarget.innerHTML
+
+    if(innerHtml == "+") {
+        $(this).parent().siblings(".info__counter-input").val(parseInt($(this).parent().siblings(".info__counter-input").val()) + 1);
+    }
+    else if (innerHtml == "-") {
+        if($(this).parent().siblings(".info__counter-input").val() <= 1) {
+
+        }
+        else {
+            $(this).parent().siblings(".info__counter-input").val(parseInt($(this).parent().siblings(".info__counter-input").val()) - 1);
+        }
+    }
+
+}
+
+$(".info__btn").on("click", changeCounter);
+
+$(".info__counter-input").change(function () {
+    if($(this).val() <= 0) {
+        $(this).val(1)       
+    }     
+    else {
+        $(this).val($(this).val());
+    } 
+});
 
     
-
+//-------------------------------------------------------------------------------------------
 
     $(".products__slider ").owlCarousel({
         loop: true,
@@ -142,6 +173,7 @@ $(document).ready(function () {
 
     $(".info__thumbnails").owlCarousel({
         nav: true,
+        navText: ["<i class='icon-left info__icon'>","<i class='icon-right info__icon'>"],
         dots: false,
         responsive: {
             0: {
@@ -153,6 +185,7 @@ $(document).ready(function () {
 
     $(".newproduct__products").owlCarousel({
         nav: true,
+        navText: ["<i class='icon-left product__icon'>","<i class='icon-right product__icon'>"],
         responsive: {
             0: {
                 items: 1,
@@ -169,7 +202,5 @@ $(document).ready(function () {
 
 
     });
-
-
 
 })

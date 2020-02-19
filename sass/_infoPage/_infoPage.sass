@@ -1,12 +1,57 @@
 .info
+  margin-bottom: rem(35px)
+  
 
   &__wrap
     background: $whiteColor
     padding: rem(20px)
     +tablet
       padding: rem(40px)
+    +laptop  
+      display: flex
+      justify-content: space-between
 
+  &__spec
+    +laptop
+      width: 58%
 
+  &__photos
+    margin-bottom: rem(50px)
+    +laptop 
+      width: 39%
+      margin-right: rem(40px)
+      margin-bottom: 0
+
+ 
+
+    .owl-nav      
+      +tablet
+        top: 40%
+        transform: translateY(-50%)
+        width: 100%
+        margin-top: 0
+        position: absolute
+
+      button.owl-next
+        position: absolute
+        right: 0
+        +tablet
+          position: absolute
+          right: -15px
+
+      button.owl-prev
+        +tablet
+          position: absolute
+          left: -15px
+
+    .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot span  
+        color: $titleColor
+        border-radius: 50%
+        font-size: rem(30px)
+        box-sizing: border-box
+        outline: none
+        
+        
   &__img-wrap
     display: block
     width: 100%
@@ -22,22 +67,161 @@
     max-width: rem(420px)
     height: auto
     
-
   &__sliders
     width: 100%
     max-width: rem(420px)
 
+  &__li
+    width: 100%
+    max-width: rem(100px)
+    margin: 0 auto
+
+
+ 
+
+  &__icon
+    font-size: rem(20px)
+
+  &__name
+    
+    color: $titleColor
+    font-size: rem(24px)
+    padding: 0 0 rem(20px)
+    border-bottom: 1px solid $borderBottomColor
+    +tablet 
+      font-size: rem(30px)
+
+  &__price-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding:  rem(20px) 0
+    border-bottom: 1px solid $borderBottomColor
+
+  &__price
+    color: $titleColor
+    font-family: $numeralFont
+    font-size: rem(20px)
+    +tablet
+      font-size: rem(24px)
+
+  &__stock
+    background: #83c837
+    padding: rem(5px) rem(8px)
+    box-sizing: border-box
+    color: $whiteColor
+
+
+  &__description
+    padding:  rem(30px) 0
+    box-sizing: border-box
+    border-bottom: 1px solid $borderBottomColor
+
+    h3
+      color: $titleColor
+      font-size: rem(16px)
+
+    p
+      color: $basketColorLight
+      line-height: rem(24px)
+
+  &__counter
+    display: flex
+    flex-wrap: wrap
+    padding:  rem(20px) 0
+    box-sizing: border-box
+    border-bottom: 1px solid $borderBottomColor
+
+    
+      
+
+  &__btns
+    margin-bottom: rem(20px)
+    +phone
+      margin-bottom: 0
+
+  &__btn
+    display: block
+    width: rem(25px)
+    height: rem(25px)
+    font-size: rem(18px)
+    background: none
+    border: none
+
+  &__btn-basket  
+    transition: 0.5s
+    width: 100% 
+    display: block
+    padding: rem(17px) rem(34px)
+    box-sizing: border-box
+    border: none
+    color: $whiteColor
+    background: $mainColor
+    font-size: rem(18px)
+    text-transform: uppercase
+    +phone
+      width: 100%
+      max-width: rem(270px)
+      margin-top: 0
+      margin-left: rem(30px)
+
+  &__btn-basket:hover
+    
+    background: $titleColor
+
+  &__counter-input
+    width: rem(50px)
+    height: rem(50px)
+    background: none
+    border: 1px solid #f0f0f0
+    text-align: center
+    font-size: rem(20px)
+    font-family: $numeralFont
+    font-weight: 600
+    margin-right: rem(5px)
+
+
+  &__category
+    padding: rem(20px) 0
+    strong
+      color: $titleColor
+
+    span 
+      color: $subtitleColor
+
+  &__socials
+    display: flex
+
+  &__social-wrap
+    transition: 0.5s
+    display: block
+    position: relative
+    width: rem(40px)
+    height: rem(40px)
+    border: 1px solid $borderColor
+    margin-right: rem(10px)
+    span 
+      font-size: rem(20px)
+      color: $subtitleColor
+      +center
+
+  &__social-wrap:hover
+    border: 1px solid #3B5998
+    background: #3B5998
+    span 
+      color: $whiteColor
+
+  &__social-wrap:nth-child(2):hover
+    border: 1px solid #E1306C
+    background: #E1306C
+
+  &__newproduct
+    margin-bottom: rem(35px)
+
 .thumbnails
-  display: flex
-  justify-content: center
-  max-width: rem(350px)
-  margin: 0 auto
-  overflow: hidden
-  
-
-
-
-  
+  margin-top: rem(30px)
+  +tablet 
+    position: relative
 
   img
     display: block
@@ -48,4 +232,6 @@
 .toggle
   display: block
   margin: 10px auto 1.5em
+
+
    

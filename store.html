@@ -5,11 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Корзина</title>
+  <title>Магазин</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.theme.default.css">
+  <link rel="stylesheet" href="node_modules/easyzoom/css/easyzoom.css">
+  <link rel="stylesheet" href="node_modules/easyzoom/css/pygments.css">
   <link rel="stylesheet" href="css/stacktable.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -153,102 +155,52 @@
         </li>
       </ul>
     </header>
-
-    <section class="basket">
-      <div class="container">
-        <div class="basket__wrap">
-          <h3 class="basket__title-main">Корзина</h3>
-          <div class="basket__table-wrap">
-            <div class="basket__none">
-              <div>Корзина пуста</div>
-              <a href="#" class="basket__makeshop">сделать покупки</a>
-            </div>
-            <div class="basket__table">
-              <div class="basket__titles">
-                <div class="basket__title-foto"></div>
-                <div class="basket__title-name">название</div>
-                <div class="basket__title">цена</div>
-                <div class="basket__title">кол-во</div>
-                <div class="basket__title">итого</div>
-                <div class="basket__title"></div>
+    <div class="storePage">
+        <div class="container">
+          <div class="storePage__flex">
+            <section class="category">     
+              <div class="category__wrap">
+                <ul>
+                  <li class="category__title">
+                    <h3>Категории</h3>
+                  </li>
+                  <li class="category__list">ДЕНЬ РОЖДЕНИЯ</li>
+                  <li class="category__list">ГОДОВЩИНА</li>
+                  <li class="category__list">ЦВЕТОЧНАЯ КОРОБКА</li>
+                  <li class="category__list">БУКЕТ РОЗ</li>
+                  <li class="category__list">8 МАРТА</li>
+                  <li class="category__list">СВАДЬБА</li>
+                  <li class="category__list">ДЛЯ НЕЕ</li>
+                  <li class="category__list">ДЛЯ ДОЧЕРИ</li>
+                </ul>
+              </div>     
+          </section>
+          <section class="store">    
+              <div class="store__wrap">
+                <div class="store__head">
+                  <h2>день рождения</h2>
+                  <div class="store__sorting">
+                    <span >Сортировка по:</span>
+                    <ul class="store__ul">
+                      <li class="store__list">
+                        <span class="stote__text">по цене </span>               
+                      </li>
+                      <li class="store__drop">
+                        <span class="icon-download store__sorting-icon"></span>
+                      </li>
+                    </ul>              
+                  </div>      
+                </div>
+                        
               </div>
-              <div class="basket__products">
-                <form action="#" class="basket__form">
-                  <div class="basket__product">
-                    <div class="basket__foto">
-                      <div class="basket__img">
-                        <img src="./img/basketPage/products/flower.png" alt="">
-                      </div>
-                    </div>
-                    <div class="basket__name">
-                      <span>название:</span>
-                      <input type="text" value="название цветка" class="basket__input basket__input-name" readonly>
-                    </div>
-
-                    <div class="basket__price basket__adaptive">
-                      <span>цена:</span>
-                      <input type="number" value="500" class="basket__input basket__input-price" readonly>
-                    </div>
-                    <div class="basket__amount basket__adaptive">
-                      <span>количество:</span>
-                      <input type="number" value="1" min="1" class="basket__input basket__input-amount">
-                      <div class="basket__btns">
-                        <button class="basket__btnplus" type="button">+</button>
-                        <button class="basket__btnminus" type="button">-</button>
-                      </div>
-                    </div>
-                    <div class="basket__total basket__adaptive">
-                      <span>итого:</span>
-                      <input type="number" value="500" class="basket__input basket__input-total" readonly>
-                    </div>
-                    <div class="basket__delete basket__adaptive">
-                      <button class="basket__btn-del" type="button">
-                        <img src="./img/basketPage/bin.svg" alt="#" width="18">
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="basket__btns-main">
-                    <a href="#" class="basket__continue">продолжить покупки</a>
-                    <button type="button" class="basket__clear">очистить корзину</button>
-                  </div>
-                  <div class="basket__total-wrap">
-                    <h3 class="basket__total-title">Итоги заказа</h3>
-                    <div class="basket__info">
-                      <span>Промежуточный итог:</span>
-                      <input type="number" class="basket__total-resident" readonly>
-                    </div>
-                    <div class="basket__info">
-                      <span>Доставка:</span>
-                      <div class="basket__radios">
-                        <div class="basket__radio">
-                          <input type="radio" id="free" value="0" class="basket__radio-input" name="name" value="0">
-                          <label for="free" class="basket__delivery">Забрать с магазина</label>
-                        </div>
-                        <div class="basket__radio">
-                          <input type="radio" value="200" id="paid" checked="checked" class="basket__radio-input"
-                            name="name">
-                          <label for="paid" class="basket__delivery">Платная доставка: <strong>200</strong> </label>
-                        </div>
-                      </div>
-
-                    </div>
-                    <div class="basket__info">
-                      <span>Общая стоимость:</span> <input type="number" class="basket__total-order" readonly>
-                    </div>
-                    <button type="submit" class="basket__btn-pay">перейти к оплате</button>
-                  </div>
-                  
-                </form>
-              </div>
-
-
-            </div>
+          </section>
           </div>
         </div>
-    </section>
+    </div>
 
+    
 
+   
     <section class="footer">
       <div class="footer__services">
         <div class="container">
@@ -365,6 +317,7 @@
   </div>
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+  <script src="node_modules/easyzoom/dist/easyzoom.js"></script>
   <script src="js/main.js"></script>
 </body>
 

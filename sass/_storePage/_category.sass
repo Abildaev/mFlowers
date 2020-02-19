@@ -1,0 +1,36 @@
+.storePage
+  padding: rem(70px) 0
+  
+.storePage__flex
+  +tablet 
+    display: flex
+    justify-content: space-between
+  
+  
+.category
+  margin-bottom: rem(70px)
+  +tablet 
+    width: 23%
+    margin-bottom: 0
+
+  &__wrap
+    padding: rem(20px)
+    background: $whiteColor
+    box-sizing: border-box
+
+  &__title
+    padding: 0 0 rem(25px)
+    border-bottom: 1px solid $borderBottomColor
+    margin-bottom: rem(5px)
+    h3
+      font-size: rem(16px)
+      text-transform: uppercase
+
+  &__list
+    font-size: rem(14px)
+    text-transform: uppercase
+    color: $basketColorLight
+    padding: rem(10px) 0
+    box-sizing: border-box
+    &:last-child
+      padding: rem(10px) 0 0

@@ -1,0 +1,73 @@
+.store
+  +tablet 
+    width: 74%
+
+
+  &__head
+    padding:  0 0 rem(30px)
+    border-bottom:  1px solid $borderBottomColor
+    +laptop
+      width: 100% 
+      display: flex
+      justify-content: space-between
+      align-items: center
+      box-sizing: border-box
+
+
+  &__wrap
+    padding: rem(20px) rem(25px)
+    background: $whiteColor
+    +laptop
+      padding: rem(30px) rem(35px)
+      
+    
+    h2
+      color: $titleColor
+      text-transform: uppercase
+      font-size: rem(18px)
+      margin-bottom: rem(20px)
+      +tablet 
+        font-size: rem(22px)
+      +laptop
+        margin-bottom: 0
+        
+
+  &__sorting
+    width: 100%
+    +phone 
+      display: inline-flex
+      align-items: center
+    +tablet
+      max-width: rem(345px)
+    
+
+  &__ul
+    margin-top: rem(15px)
+    display: flex
+    width: 100%
+    background: #f0f0f0
+    +phone
+      margin: 0 0 0 rem(15px)
+      max-width: rem(205px)
+
+  &__list
+    padding: rem(10px)
+    width: 80%
+    span 
+      color: $basketColorLight
+
+  &__drop
+    position: relative
+    width: 20%
+    
+
+  
+  &__sorting-icon
+    font-size: rem(12px)
+    color: #343434
+    +center
+
+  
+
+  
+    

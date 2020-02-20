@@ -787,7 +787,7 @@ ul {
   font-weight: bold;
   font-size: 1.125rem;
   font-family: "Montserrat";
-  margin-bottom: 0.9375rem;
+  margin: 0.9375rem 0;
 }
 .products__button {
   border: 1px solid #bababa;
@@ -860,6 +860,9 @@ ul {
   padding: 2.1875rem 0;
   box-sizing: border-box;
 }
+.newproduct .owl-theme .owl-nav {
+  margin-top: 0;
+}
 .newproduct__wrap {
   display: flex;
   flex-direction: column;
@@ -891,13 +894,13 @@ ul {
 .newproduct__products {
   position: relative;
   box-sizing: border-box;
-  padding: 1.875rem 0 0;
+  padding: 1.875rem 0;
   background: #fff;
 }
 @media screen and (min-width: 960px) {
   .newproduct__products {
     width: 75%;
-    padding: 1.875rem 2.8125rem 0;
+    padding: 1.875rem 2.8125rem;
   }
 }
 .newproduct__products.owl-theme .owl-dots .owl-dot span {
@@ -1075,6 +1078,7 @@ ul {
   margin-bottom: 0;
 }
 .mainblog__img {
+  position: relative;
   display: inline-block;
   width: 100%;
   max-width: 22.5rem;
@@ -1082,6 +1086,40 @@ ul {
   background: #ccc;
   overflow: hidden;
   margin-bottom: 0.5rem;
+}
+.mainblog__img:after {
+  transition: 0.5s;
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 13.75rem;
+  background: #0e0000;
+  opacity: 0.5;
+}
+.mainblog__img:hover:after {
+  right: 0;
+}
+.mainblog__img:hover .mainblog__icon {
+  opacity: 1;
+}
+.mainblog__icon {
+  transition: 0.6s;
+  opacity: 0;
+  background: #e2c9b8;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  text-align: center;
+  line-height: 2.8125rem;
+  border-radius: 50%;
+  border: none;
+  z-index: 2;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .mainblog__date {
   font-family: "Montserrat";
@@ -2116,6 +2154,13 @@ ul {
 .category__list:last-child {
   padding: 0.625rem 0 0;
 }
+.category__link {
+  color: #838383;
+}
+.category__link.is-active {
+  font-weight: 600;
+  color: #0e0000;
+}
 
 @media screen and (min-width: 768px) {
   .store {
@@ -2125,6 +2170,7 @@ ul {
 .store__head {
   padding: 0 0 1.875rem;
   border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 1.875rem;
 }
 @media screen and (min-width: 960px) {
   .store__head {
@@ -2141,7 +2187,7 @@ ul {
 }
 @media screen and (min-width: 960px) {
   .store__wrap {
-    padding: 1.875rem 2.1875rem;
+    padding: 1.875rem 2.1875rem 0;
   }
 }
 .store__wrap h2 {
@@ -2187,23 +2233,307 @@ ul {
   }
 }
 .store__list {
+  position: relative;
   padding: 0.625rem;
   width: 80%;
 }
 .store__list span {
   color: #838383;
+  font-size: 0.875rem;
+}
+.store__list-ul {
+  z-index: 2;
+  visibility: hidden;
+  transition: 0.5s;
+  opacity: 0;
+  width: 122.2%;
+  padding: 0 0.625rem;
+  box-sizing: border-box;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #f8f8f8;
+  border: 1px solid #f0f0f0;
+  color: #838383;
+  font-size: 0.875rem;
+  position: absolute;
+}
+.store__list-li {
+  transition: 0.5s;
+  color: #838383;
+  display: block;
+  margin-bottom: 0.625rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+.store__list-li.active {
+  color: #0e0000;
+  border-bottom: 1px solid #0e0000;
+}
+.store__text {
+  color: #838383;
+  font-size: 0.875rem;
+}
+.store__list-li:hover {
+  color: #0e0000;
+  border-bottom: 1px solid #0e0000;
+}
+.store__list-li:last-child {
+  margin-bottom: 0;
+}
+.store__list-ul.is-active {
+  visibility: visible;
+  opacity: 1;
+  padding: 0.625rem;
 }
 .store__drop {
   position: relative;
   width: 20%;
 }
 .store__sorting-icon {
+  transform: rotate(90deg);
   font-size: 0.75rem;
   color: #343434;
+  position: absolute;
+  transition: 0.5s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.store__sorting-icon.is-active {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.store__products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.store__product {
+  margin: 0 0 3.125rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .store__product {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .store__product {
+    max-width: 15rem;
+  }
+}
+
+.blogpage {
+  margin-bottom: 4.375rem;
+}
+@media screen and (min-width: 768px) {
+  .blogpage__flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) {
+  .blogpage__asides {
+    margin-right: 1.875rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .blogpage__asides {
+    margin-right: 0;
+  }
+}
+.blogpage__blogs {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.875rem 1.25rem;
+  background: #fff;
+}
+@media screen and (min-width: 768px) {
+  .blogpage__blogs {
+    width: 70%;
+    padding: 1.875rem;
+  }
+}
+@media screen and (min-width: 960px) {
+  .blogpage__blogs {
+    width: 74%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .blogpage__blogs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+.blogpage__blog {
+  margin-bottom: 3.125rem;
+}
+@media screen and (min-width: 960px) {
+  .blogpage__blog {
+    width: 48%;
+  }
+}
+.blogpage__blog:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 960px) {
+  .blogpage__blog:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+}
+.blogpage__search {
+  display: flex;
+  margin-bottom: 2.1875rem;
+  max-width: 16.25rem;
+}
+.blogpage__search-input {
+  padding: 0.9375rem;
+  box-sizing: border-box;
+  width: 100%;
+  background: #fff;
+  border: none;
+  font-size: 0.875rem;
+}
+.blogpage__search-input::-webkit-input-placeholder {
+  font-size: 0.875rem;
+  font-family: "Raleway";
+  color: #a9a9a9;
+}
+.blogpage__search-input:-moz-placeholder {
+  font-size: 0.875rem;
+  font-family: "Raleway";
+  color: #a9a9a9;
+}
+.blogpage__search-input::-moz-placeholder {
+  font-size: 0.875rem;
+  font-family: "Raleway";
+  color: #a9a9a9;
+}
+.blogpage__search-input:-ms-input-placeholder {
+  font-size: 0.875rem;
+  font-family: "Raleway";
+  color: #a9a9a9;
+}
+.blogpage__search-btn {
+  padding: 0.9375rem;
+  box-sizing: border-box;
+  border: none;
+  background: #e2c9b8;
+  color: #fff;
+  font-size: 0.875rem;
+  font-family: "Raleway";
+  font-weight: 600;
+}
+.blogpage__aside {
+  padding: 2.1875rem 1.25rem;
+  box-sizing: border-box;
+  background: #fff;
+  margin-bottom: 2.1875rem;
+}
+.blogpage__aside h3 {
+  color: #0e0000;
+  font-size: 1.125rem;
+  margin-bottom: 1.5625rem;
+}
+.blogpage__aside li {
+  margin-bottom: 1.25rem;
+}
+.blogpage__aside li a {
+  color: #a9a9a9;
+}
+.blogpage__aside li a:hover {
+  color: #0e0000;
+}
+.blogpage__aside li a span {
+  font-family: "Montserrat";
+}
+@media screen and (min-width: 768px) {
+  .blogpage__aside {
+    max-width: 16.25rem;
+  }
+}
+.blogpage__img {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  background: #ccc;
+  height: 15.625rem;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 480px) {
+  .blogpage__img {
+    height: 18.75rem;
+  }
+}
+@media screen and (min-width: 960px) {
+  .blogpage__img {
+    height: 13.75rem;
+  }
+}
+.blogpage__img:after {
+  transition: 0.5s;
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  width: 100%;
+  background: #0e0000;
+  opacity: 0.5;
+}
+.blogpage__img:hover:after {
+  right: 0;
+}
+.blogpage__img:hover .blogpage__icon {
+  opacity: 1;
+}
+.blogpage__icon {
+  transition: 0.6s;
+  opacity: 0;
+  background: #e2c9b8;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  text-align: center;
+  line-height: 2.8125rem;
+  border-radius: 50%;
+  border: none;
+  z-index: 2;
+  color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.blogpage__date {
+  font-family: "Montserrat";
+  font-size: 0.875rem;
+  color: #a9a9a9;
+  font-weight: normal;
+  margin-bottom: 1.25rem;
+}
+.blogpage__link {
+  display: inline-block;
+  transition: 0.5s;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  border: 1px solid #bababa;
+  text-transform: uppercase;
+  color: #a9a9a9;
+}
+.blogpage__link:hover {
+  border: 1px solid #e2c9b8;
+  background: #e2c9b8;
+  color: #fff;
+}
+.blogpage__title-blog {
+  color: #0e0000;
+}
+.blogpage__subtitle-blog {
+  width: 90%;
+  color: #a9a9a9;
+  margin-bottom: 1.5625rem;
 }
 
 /*# sourceMappingURL=main.css.map */

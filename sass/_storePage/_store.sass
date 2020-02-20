@@ -6,6 +6,7 @@
   &__head
     padding:  0 0 rem(30px)
     border-bottom:  1px solid $borderBottomColor
+    margin-bottom: rem(30px)
     +laptop
       width: 100% 
       display: flex
@@ -18,7 +19,7 @@
     padding: rem(20px) rem(25px)
     background: $whiteColor
     +laptop
-      padding: rem(30px) rem(35px)
+      padding: rem(30px) rem(35px) 0
       
     
     h2
@@ -51,10 +52,60 @@
       max-width: rem(205px)
 
   &__list
+    position: relative
     padding: rem(10px)
     width: 80%
     span 
       color: $basketColorLight
+      font-size: rem(14px)
+
+  
+
+
+  &__list-ul
+    z-index: 2
+    visibility: hidden
+    transition: 0.5s
+    opacity: 0
+    width: 122.2%
+    padding: 0 rem(10px) 
+    box-sizing: border-box
+    position: absolute
+    top: 100%
+    left: 0
+    background: $lightColor
+    border: 1px solid  #f0f0f0
+    color: $basketColorLight
+    font-size: rem(14px)
+    position: absolute
+  
+  &__list-li
+    transition: 0.5s
+    color: $basketColorLight
+    display: block
+    margin-bottom: rem(10px)
+    border-bottom: 1px solid rgba(0, 0, 0, 0)
+
+  &__list-li.active
+    color: $titleColor
+    border-bottom: 1px solid $titleColor
+
+
+  &__text
+    color: $basketColorLight
+    font-size: rem(14px)
+
+  &__list-li:hover
+    color: $titleColor
+    border-bottom: 1px solid $titleColor
+
+  &__list-li:last-child
+    margin-bottom: 0
+    
+  &__list-ul.is-active
+    visibility: visible
+    opacity: 1
+    padding: rem(10px)
 
   &__drop
     position: relative
@@ -63,9 +114,34 @@
 
   
   &__sorting-icon
+    transform: rotate(90deg)
     font-size: rem(12px)
     color: #343434
-    +center
+    position: absolute
+    
+    transition: .5s
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+  &__sorting-icon.is-active
+    transform: translate(-50%, -50%) rotate(180deg)
+
+
+  &__products
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+  &__product
+    margin: 0 0 rem(50px) 
+    width: 100%
+    +tablet
+      width: 48%
+    +desktop
+      max-width: rem(240px)
+      
+
 
   
 

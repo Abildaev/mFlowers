@@ -5,13 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Магазин</title>
+  <title>Корзина</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.theme.default.css">
-  <link rel="stylesheet" href="node_modules/easyzoom/css/easyzoom.css">
-  <link rel="stylesheet" href="node_modules/easyzoom/css/pygments.css">
   <link rel="stylesheet" href="css/stacktable.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -155,142 +153,132 @@
         </li>
       </ul>
     </header>
-    <div class="storePage">
+
+    <div class="blogpage">
       <div class="container">
-        <div class="storePage__flex">
-          <section class="category">
-            <div class="category__wrap">
+        <ul class="crumbs">
+          <li class="crumb">
+            <a href="#" class="crumb-link">Главная</a>
+            <span>/</span>
+          </li>
+          <li class="crumb">
+            Блог
+          </li>
+        </ul>
+        <div class="blogpage__flex">
+          <div class="blogpage__asides">
+            <form action="#" class="blogpage__search">
+              <input type="search" class="blogpage__search-input" placeholder="Поиск...">
+              <input type="submit" value="Искать" class="blogpage__search-btn">
+            </form>
+            <aside class="blogpage__aside">
+              <h3>Архив</h3>
               <ul>
-                <li class="category__title">
-                  <h3>Категории</h3>
+                <li>
+                  <a href="#">Июнь <span>2019</span> </a>
                 </li>
-                <li class="category__list">
-                  <a href="#" class="category__link">ДЕНЬ РОЖДЕНИЯ</a>
+                <li>
+                  <a href="#">Сентябрь <span>2019</span></a>
                 </li>
-                <li class="category__list">
-                  <a href="#" class="category__link">ГОДОВЩИНА</a>
+                <li>
+                  <a href="#">Январь <span>2020</span></a>
                 </li>
-                <li class="category__list">
-                  <a href="#" class="category__link">ЦВЕТОЧНАЯ КОРОБКА</a>
-                </li>
-                <li class="category__list">
-                  <a href="#" class="category__link">БУКЕТ РОЗ</a>
-                </li>
-                <li class="category__list">
-                  <a href="#" class="category__link">8 МАРТА</a>
-                </li>
-                <li class="category__list">
-                  <a href="#" class="category__link">СВАДЬБА</a>
-                </li>
-                <li class="category__list">
-                  <a href="#" class="category__link">ДЛЯ НЕЕ</a>
-                </li>
-                <li class="category__list">
-                  <a href="#" class="category__link">ДЛЯ ДОЧЕРИ</a>
+                <li>
+                  <a href="#">Февраль <span>2020</span></a>
                 </li>
               </ul>
-            </div>
-          </section>
-          <section class="store">
-            <div class="store__wrap">
-              <div class="store__head">
-                <h2>день рождения</h2>
-                <div class="store__sorting">
-                  <span>Сортировка по:</span>
+            </aside>
+            <aside class="blogpage__aside">
+              <h3>Категории</h3>
+              <ul>
+                <li>
+                  <a href="#">Уход за розами</a>
+                </li>
+                <li>
+                  <a href="#">Домашние цветы</a>
+                </li>
+                <li>
+                  <a href="#">Тюльпаны</a>
+                </li>
+                <li>
+                  <a href="#">Собираем букет</a>
+                </li>
+              </ul>
+            </aside>
+          </div>
 
-                  <div class="store__ul">
-                    <div class="store__list">
-                      <span class="store__text">По цене возрастания</span>
-                      <div class="store__list-ul">
-                        <option value="#" class="store__list-li">По полулярности</option>
-                        <option value="#" class="store__list-li">По цене убывания</option >
-                        <option value="#" class="store__list-li">По цене возрастания</option>
-                      </div>
-                    </div>
-
-                    <div class="store__drop">
-                      <span class="icon-download store__sorting-icon"></span>
-                    </div>
-                  </div>
-
-                </div>
+          <div class="blogpage__blogs">
+            <div class="blogpage__blog">
+              <a href="#" class="blogpage__img">
+                <img src="./img/blogPage/flower.png" alt="#" class="blogpage__pic">
+                <span class="icon-search blogpage__icon"></span>
+              </a>
+              <div class="mainblog__date">
+                <span class="icon-calendar"></span>
+                <span>Январь</span>
+                <span>25</span>
+                <span>2020</span>
               </div>
-
-              <div class="store__products">
-                <div class="products__product store__product">
-                  <a href="#">
-                    <div class="products__photo newproduct__photo">
-                      <span class="icon-eye products__icon"></span>
-                      <img src="./img/mainPage/produsts/flower.png" alt="#">
-                    </div>
-                    <span class="products__name">Кактус обыкновенный</span>
-                  </a>
-                  <span class="products__price">2500 с</span>
-                  <a href="#" class="products__button">в корзину</a>
-                </div>
-                <div class="products__product store__product">
-                  <a href="#">
-                    <div class="products__photo newproduct__photo">
-                      <span class="icon-eye products__icon"></span>
-                      <img src="./img/mainPage/produsts/flower.png" alt="#">
-                    </div>
-                    <span class="products__name">Кактус обыкновенный</span>
-                  </a>
-                  <span class="products__price">2500 с</span>
-                  <a href="#" class="products__button">в корзину</a>
-                </div>
-                <div class="products__product store__product">
-                  <a href="#">
-                    <div class="products__photo newproduct__photo">
-                      <span class="icon-eye products__icon"></span>
-                      <img src="./img/mainPage/produsts/flower.png" alt="#">
-                    </div>
-                    <span class="products__name">Кактус обыкновенный</span>
-                  </a>
-                  <span class="products__price">2500 с</span>
-                  <a href="#" class="products__button">в корзину</a>
-                </div>
-                <div class="products__product store__product">
-                  <a href="#">
-                    <div class="products__photo newproduct__photo">
-                      <span class="icon-eye products__icon"></span>
-                      <img src="./img/mainPage/produsts/flower.png" alt="#">
-                    </div>
-                    <span class="products__name">Кактус обыкновенный</span>
-                  </a>
-                  <span class="products__price">2500 с</span>
-                  <a href="#" class="products__button">в корзину</a>
-                </div>
-                <div class="products__product store__product">
-                  <a href="#">
-                    <div class="products__photo newproduct__photo">
-                      <span class="icon-eye products__icon"></span>
-                      <img src="./img/mainPage/produsts/flower.png" alt="#">
-                    </div>
-                    <span class="products__name">Кактус обыкновенный</span>
-                  </a>
-                  <span class="products__price">2500 с</span>
-                  <a href="#" class="products__button">в корзину</a>
-                </div>
-                <div class="products__product store__product">
-                  <a href="#">
-                    <div class="products__photo newproduct__photo">
-                      <span class="icon-eye products__icon"></span>
-                      <img src="./img/mainPage/produsts/flower.png" alt="#">
-                    </div>
-                    <span class="products__name">Кактус обыкновенный</span>
-                  </a>
-                  <span class="products__price">2500 с</span>
-                  <a href="#" class="products__button">в корзину</a>
-                </div>
-              </div>
-
+              <h3 class="blogpage__title-blog">Здесь будет название темы блога </h3>
+              <p class="blogpage__subtitle-blog">Есть много вариантов Lorem Ipsum, но большинство из них имеет
+                не всегда приемлемые модификации</p>
+              <a href="#" class="blogpage__link">читать далее</a>
             </div>
-          </section>
+            <div class="blogpage__blog">
+              <a href="#" class="blogpage__img">
+                <img src="./img/blogPage/flower.png" alt="#" class="blogpage__pic">
+                <span class="icon-search blogpage__icon"></span>
+              </a>
+              <div class="mainblog__date">
+                <span class="icon-calendar"></span>
+                <span>Январь</span>
+                <span>25</span>
+                <span>2020</span>
+              </div>
+              <h3 class="blogpage__title-blog">Здесь будет название темы блога </h3>
+              <p class="blogpage__subtitle-blog">Есть много вариантов Lorem Ipsum, но большинство из них имеет
+                не всегда приемлемые модификации</p>
+              <a href="#" class="blogpage__link">читать далее</a>
+            </div>
+            <div class="blogpage__blog">
+              <a href="#" class="blogpage__img">
+                <img src="./img/blogPage/flower.png" alt="#" class="blogpage__pic">
+                <span class="icon-search blogpage__icon"></span>
+              </a>
+              <div class="mainblog__date">
+                <span class="icon-calendar"></span>
+                <span>Январь</span>
+                <span>25</span>
+                <span>2020</span>
+              </div>
+              <h3 class="blogpage__title-blog">Здесь будет название темы блога </h3>
+              <p class="blogpage__subtitle-blog">Есть много вариантов Lorem Ipsum, но большинство из них имеет
+                не всегда приемлемые модификации</p>
+              <a href="#" class="blogpage__link">читать далее</a>
+            </div>
+            <div class="blogpage__blog">
+              <a href="#" class="blogpage__img">
+                <img src="./img/blogPage/flower.png" alt="#" class="blogpage__pic">
+                <span class="icon-search blogpage__icon"></span>
+              </a>
+              <div class="mainblog__date">
+                <span class="icon-calendar"></span>
+                <span>Январь</span>
+                <span>25</span>
+                <span>2020</span>
+              </div>
+              <h3 class="blogpage__title-blog">Здесь будет название темы блога </h3>
+              <p class="blogpage__subtitle-blog">Есть много вариантов Lorem Ipsum, но большинство из них имеет
+                не всегда приемлемые модификации</p>
+              <a href="#" class="blogpage__link">читать далее</a>
+            </div>
+           
+          </div>
         </div>
+
+
       </div>
     </div>
-
 
 
 
@@ -314,7 +302,6 @@
               <span class="icon-undo footer__icon"></span>
               <span class="footer__name">возврат обмен</span>
             </div>
-
           </div>
         </div>
       </div>

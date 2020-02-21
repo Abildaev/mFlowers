@@ -2807,4 +2807,76 @@ ul {
   background: #e2c9b8;
 }
 
+.notfound {
+  margin: 4.375rem 0;
+}
+.notfound__img {
+  display: block;
+  margin: 0 auto 2.1875rem;
+  text-align: center;
+  width: 100%;
+  max-width: 34.25rem;
+}
+.notfound__title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0 auto 2.1875rem;
+}
+@media screen and (min-width: 768px) {
+  .notfound__title {
+    font-size: 2.25rem;
+  }
+}
+@media screen and (min-width: 960px) {
+  .notfound__title {
+    font-size: 3rem;
+  }
+}
+.notfound__link {
+  display: block;
+  transition: 0.5s;
+  width: 100%;
+  max-width: 11.875rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  background: #e2c9b8;
+  padding: 0.9375rem 2.25rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.notfound__link:hover {
+  background: #0e0000;
+}
+
+.faq {
+  margin-bottom: 3.75rem;
+}
+.faq__wrap {
+  background: #fff;
+  padding: 2.1875rem;
+}
+.faq__wrap h2 {
+  font-size: 1.5rem;
+  color: #0e0000;
+  margin-bottom: 4.375rem;
+}
+.faq__wrap h3 {
+  font-size: 1.125rem;
+  color: #0e0000;
+}
+.faq__wrap p {
+  color: #838383;
+  margin-bottom: 3.75rem;
+}
+@media screen and (min-width: 768px) {
+  .faq__wrap p {
+    width: 85%;
+  }
+}
+.faq__wrap p:last-child {
+  margin-bottom: 0;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,177 @@
+.post
+  margin-bottom: rem(70px)
+
+  &__block
+    box-sizing: border-box
+    background: $whiteColor
+    padding: rem(30px) rem(20px)
+    margin-bottom: rem(35px)
+    +tablet 
+      width: 74%
+      padding: rem(35px)
+
+  &__title
+    font-size: rem(18px)
+    padding: 0 0  rem(35px)
+    border-bottom: 1px solid $borderBottomColor
+
+  &__comments
+    padding: rem(35px) 0 
+    border-bottom: 1px solid $borderBottomColor
+
+  &__comments:last-child
+    border: none
+    padding: rem(35px) 0  0 
+  &__comment
+    &-body
+      +phone
+        display: flex
+        align-items: center
+
+
+    &-img 
+      width: 100%
+      max-width: rem(80px)
+      height: rem(80px)
+      border-radius: 50%
+      overflow: hidden
+      background: #ccc
+      margin-bottom: rem(15px)
+      +phone 
+        margin: 0 rem(25px) 0 rem(10px)
+
+
+    &-name
+      display: inline-block
+      margin-bottom: rem(10px)
+      font-weight: 600
+      color: $titleColor
+      +tablet 
+        font-size: rem(18px)
+
+    &-time       
+      display: block
+      font-family: $numeralFont
+      color: #7b7b7b
+      font-size: rem(14px)
+      margin-bottom: rem(25px)
+      +phone
+        display: inline-block
+        margin-left: rem(12px)
+
+    &-paraph
+      margin: 0
+      font-size: rem(14px)
+      line-height: rem(24px)
+      color: $subtitleColor
+      margin-bottom: rem(25px)
+      +phone
+        width: 80%
+      +tablet 
+        font-size: rem(16px)
+
+    &-reply
+      transition: 0.5s
+      color: $mainColor
+      text-transform: uppercase
+      font-size: rem(14px)
+      font-weight: 600
+      &:hover
+        color: $titleColor
+
+  &__children
+    padding: rem(35px)  0  0 13%
+
+  &__reply-img
+    width: 100%
+    max-width: rem(70px)
+    height: rem(70px)
+    border-radius: 50%
+    overflow: hidden
+    background: #ccc
+    margin-bottom: rem(15px)
+    +phone 
+      margin: 0 rem(25px) 0 rem(10px)
+
+
+  &__respond
+    box-sizing: border-box
+    background: $whiteColor
+    padding: rem(30px) rem(20px)
+    +tablet 
+      width: 74%
+      padding: rem(35px)
+
+
+    &-title
+      font-size: rem(18px)
+      padding: 0 0  rem(35px)
+
+  &__form
+    +tablet
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+
+  &__label
+    color: $basketColorLight
+    display: block
+    margin-bottom: rem(15px)
+    +tablet 
+      font-size: rem(18px)
+
+  &__form-input
+    width: 100%
+    display: block
+    height: rem(45px)
+    border: 1px solid $borderBottomColor
+    background: none
+    font-size: rem(16px)
+    padding: rem(15px)
+    box-sizing: border-box
+    color: $titleColor
+
+
+  &__form-block
+    margin-bottom: rem(35px)
+    +tablet
+      width: 48%
+  
+  &__form-text
+    margin-bottom: rem(35px)
+    +tablet
+      width: 100%
+      
+
+
+  &__form-textarea
+    width: 100%
+    display: block
+    border: 1px solid $borderBottomColor
+    background: none
+    font-size: rem(16px)
+    font-family: $mainFont
+    height: rem(200px)
+    padding: rem(15px)
+    box-sizing: border-box
+    color: $titleColor  
+    outline: none
+    resize: none
+    +tablet
+      height: rem(230px)
+
+  &__form-submit
+    display: block
+    transition: 0.5s
+    margin-left: auto
+    box-sizing: border-box
+    padding: rem(16px) rem(32px)
+    background: $titleColor
+    border: none
+    text-transform: uppercase
+    color: $whiteColor
+    +tablet
+      font-size: rem(16px)
+
+    &:hover
+      background: $mainColor

@@ -191,6 +191,20 @@ $(".store__list-li").click(changeSorting);
 
 //----------------------------------------------------------------------------------------------
 
+
+/// блог все
+
+$(".blogpage__link-acide").click(function (e) {
+    e.preventDefault();
+    $(".blogpage__link-acide").removeClass("active");
+    $(this).addClass("active");
+})
+
+
+
+
+//---------------------------------
+
     $(".products__slider ").owlCarousel({
         loop: true,
         margin: 10,

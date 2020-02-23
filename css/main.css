@@ -2869,6 +2869,7 @@ ul {
 .faq__wrap p {
   color: #838383;
   margin-bottom: 3.75rem;
+  line-height: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .faq__wrap p {
@@ -2877,6 +2878,135 @@ ul {
 }
 .faq__wrap p:last-child {
   margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .map {
+    width: 48%;
+  }
+}
+
+.contact {
+  margin: 4.375rem 0;
+}
+@media screen and (min-width: 768px) {
+  .contact__wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+.contact__form-wrap {
+  background: #fff;
+  padding: 2.1875rem 1.25rem;
+  box-sizing: border-box;
+  margin-bottom: 2.1875rem;
+}
+@media screen and (min-width: 768px) {
+  .contact__form-wrap {
+    width: 48%;
+    padding: 2.1875rem;
+  }
+}
+@media screen and (min-width: 480px) {
+  .contact__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact__form {
+    flex-direction: column;
+  }
+}
+.contact__title {
+  font-size: 1.125rem;
+  color: #0e0000;
+  margin-bottom: 2.1875rem;
+}
+@media screen and (min-width: 480px) {
+  .contact__title {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact__title {
+    margin-bottom: 2.5rem;
+  }
+}
+@media screen and (min-width: 960px) {
+  .contact__title {
+    font-size: 1.5rem;
+    margin-bottom: 2.1875rem;
+  }
+}
+.contact__label {
+  color: #838383;
+  display: block;
+  margin-bottom: 0.9375rem;
+}
+@media screen and (min-width: 768px) {
+  .contact__label {
+    font-size: 1.125rem;
+  }
+}
+.contact__input {
+  font-size: 1rem;
+  font-family: "Montserrat";
+  display: block;
+  width: 100%;
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  padding: 0.9375rem;
+}
+.contact__input-wrap {
+  margin-bottom: 2.1875rem;
+}
+@media screen and (min-width: 480px) {
+  .contact__input-wrap {
+    width: 49%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact__input-wrap {
+    width: 100%;
+  }
+}
+.contact__submit {
+  font-family: "Raleway";
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  transition: 0.5s;
+  padding: 0.9375rem 1.875rem;
+  background: #e2c9b8;
+  color: #fff;
+  border: none;
+  font-size: 0.875rem;
+  box-sizing: border-box;
+}
+.contact__submit:hover {
+  background: #0e0000;
+}
+@media screen and (min-width: 480px) {
+  .contact__submit {
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact__submit {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 960px) {
+  .contact__submit {
+    margin: 0;
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

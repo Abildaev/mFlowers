@@ -1,0 +1,94 @@
+.map
+  +tablet 
+    width: 48%
+  
+.contact
+
+  margin: rem(70px) 0
+
+  &__wrap
+    +tablet 
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+
+  &__form-wrap
+    background: $whiteColor
+    padding: rem(35px) rem(20px)
+    box-sizing: border-box
+    margin-bottom: rem(35px)
+    +tablet 
+      width: 48%
+      padding: rem(35px)
+
+  &__form
+    +phone
+      display: flex
+      flex-wrap: wrap
+      justify-content:  space-between
+    +tablet 
+      flex-direction: column
+
+
+
+  &__title
+    font-size: rem(18px)
+    color: $titleColor
+    margin-bottom: rem(35px)
+    +phone
+      font-size: rem(20px)
+    +tablet 
+      margin-bottom: rem(40px)
+    +laptop
+      font-size: rem(24px)
+      margin-bottom: rem(35px)
+
+
+  &__label
+    color: $basketColorLight
+    display: block
+    margin-bottom: rem(15px)
+    +tablet 
+      font-size: rem(18px)
+
+  &__input
+    font-size: rem(16px)
+    font-family: $numeralFont
+    display: block
+    width: 100%
+    border: 1px solid $borderBottomColor
+    box-sizing: border-box
+    padding: rem(15px) 
+
+  &__input-wrap
+    margin-bottom: rem(35px)
+    +phone
+      width: 49%
+
+    +tablet 
+      width: 100%
+
+  &__submit
+    font-family: $mainFont
+    font-weight: 600
+    display: block
+    width: 100%
+    text-transform: uppercase
+    transition: 0.5s
+    padding: rem(15px) rem(30px)
+    background: $mainColor
+    color: $whiteColor
+    border: none
+    font-size: rem(14px)
+    box-sizing: border-box
+    &:hover
+      background: $titleColor
+    +phone
+      margin: 0 auto
+      width: 50%
+    +tablet 
+      width: 100%
+      font-size: rem(16px)
+    +laptop
+      margin: 0
+      width: 50%

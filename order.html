@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Корзина</title>
+  <title>Форма заказа</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
@@ -153,99 +153,154 @@
       </ul>
     </header>
 
-    <section class="basket">
+    <div class="order">
       <div class="container">
-        <div class="basket__wrap">
-          <h3 class="basket__title-main">Корзина</h3>
-          <div class="basket__table-wrap">
-            <div class="basket__none">
-              <div>Корзина пуста</div>
-              <a href="#" class="basket__makeshop">сделать покупки</a>
-            </div>
-            <div class="basket__table">
-              <div class="basket__titles">
-                <div class="basket__title-foto"></div>
-                <div class="basket__title-name">название</div>
-                <div class="basket__title">цена</div>
-                <div class="basket__title">кол-во</div>
-                <div class="basket__title">итого</div>
-                <div class="basket__title"></div>
+        <div class="order__wrap">
+          <h2 class="order__title">Оформление заказа</h2>
+          <form action="#" class="order__form">
+            <div class="order__form-wrap">
+              <div class="order__group order__group-half">
+                <label for="order_name" class="order__label">Имя<span>*</span></label>
+                <input type="text" id="order_name" class="order__input" required>
               </div>
-              <div class="basket__products">
-                <form action="#" class="basket__form">
-                  <div class="basket__product">
-                    <div class="basket__foto">
-                      <div class="basket__img">
-                        <img src="./img/basketPage/products/flower.png" alt="">
+              <div class="order__group order__group-half">
+                <label for="order_lastname" class="order__label">Фамилия<span>*</span></label>
+                <input type="text" id="order_lastname" class="order__input" required>
+              </div>
+              <div class="order__group">
+                <label for="order_company" class="order__label">Название компании (необязательно)</label>
+                <input type="text" id="order_company" class="order__input">
+              </div>
+              <div class="order__group">
+                <label for="order_region" class="order__label">Область/Округ<span>*</span></label>
+                <input type="text" id="order_region" class="order__input" required>
+              </div>
+              <div class="order__group order__group-half">
+                <label for="order_city" class="order__label">Город<span>*</span></label>
+                <input type="text" id="order_city" class="order__input" required>
+              </div>
+              <div class="order__group order__group-half">
+                <label for="order_index" class="order__label">Почтовый индекс<span>*</span></label>
+                <input type="text" id="order_index" class="order__input" required>
+              </div>
+              <div class="order__group order__group-half">
+                <label for="order_street" class="order__label">Улица <span>*</span></label>
+                <input type="text" id="order_street" class="order__input" required>
+              </div>
+              <div class="order__group order__group-half">
+                <label for="order_home" class="order__label">Дом<span>*</span></label>
+                <input type="text" id="order_home" class="order__input" required>
+              </div>
+              <div class="order__group">
+                <label for="order_email" class="order__label">Адрес электронной почты (необязательно) </label>
+                <input type="email" id="order_email" class="order__input">
+              </div>
+              <div class="order__group">
+                <label for="order_phone" class="order__label">Телефон<span>*</span></label>
+                <input type="text" id="order_phone" class="order__input" required>
+              </div>
+            </div>
+
+            <div class="order__info">
+              <div class="order__group-textarea">
+                <label for="order_message" class="order__label">Примечания к заказу (необязательно)</label>
+                <textarea id="order_message" class="order__input order__message"></textarea>
+              </div>
+              <p>
+                Ваши данные полностью защищены и не будут передаваться третьим лицам.Пожалуйста проверьте правильность
+                ввода данных.
+              </p>
+              <div class="order__info-text">
+                <h2>Информация о заказе</h2>
+                <div>
+                  <div class="order__info-title">Продукт</div>
+                  <div class="order__products">
+                    <div class="order__product">
+                      <div class="order__product-name">Домашний цветок <span>x2</span></div>
+                      <div>
+                        <input type="text" value="3500" class="order__info-input" readonly>c
                       </div>
                     </div>
-                    <div class="basket__name">
-                      <span>название:</span>
-                      <input type="text" value="название цветка" class="basket__input basket__input-name" readonly>
-                    </div>
-
-                    <div class="basket__price basket__adaptive">
-                      <span>цена:</span>
-                      <input type="number" value="500" class="basket__input basket__input-price" readonly>
-                    </div>
-                    <div class="basket__amount basket__adaptive">
-                      <span>количество:</span>
-                      <input type="number" value="1" min="1" class="basket__input basket__input-amount">
-                      <div class="basket__btns">
-                        <button class="basket__btnplus" type="button">+</button>
-                        <button class="basket__btnminus" type="button">-</button>
+                    <div class="order__product">
+                      <div class="order__product-name">Домашний цветок <span>x2</span></div>
+                      <div>
+                        <input type="text" value="3500" class="order__info-input" readonly>c
                       </div>
                     </div>
-                    <div class="basket__total basket__adaptive">
-                      <span>итого:</span>
-                      <input type="number" value="500" class="basket__input basket__input-total" readonly>
-                    </div>
-                    <div class="basket__delete basket__adaptive">
-                      <button class="basket__btn-del" type="button">
-                        <img src="./img/basketPage/bin.svg" alt="#" width="18">
-                      </button>
+                  </div>
+                  <div class="order__resident">
+                    <div class="order__info-title">Промежуточный итог:</div>
+                    <div>
+                      <input type="text" value="3500" class="order__info-input order__resident-input" readonly>c
                     </div>
                   </div>
-
-                  <div class="basket__btns-main">
-                    <a href="#" class="basket__continue">продолжить покупки</a>
-                    <button type="button" class="basket__clear">очистить корзину</button>
+                  <div class="order__resident">
+                    <div class="order__info-title">Перевозка:</div>
+                    <div class="order__radios">
+                      <span class="order__radio-text"><input type="radio" class="order__radio"
+                          name="order__radio">Забрать с магазина</span>
+                      <span class="order__radio-text"><input type="radio" class="order__radio" name="order__radio"
+                          checked="checked">Платная доставка: 200c</span>
+                    </div>
                   </div>
-                  <div class="basket__total-wrap">
-                    <h3 class="basket__total-title">Итоги заказа</h3>
-                    <div class="basket__info">
-                      <span>Промежуточный итог:</span>
-                      <input type="number" class="basket__total-resident" readonly>
+                  <div class="order__resident">
+                    <div class="order__info-title">Общая стоимость:</div>
+                    <div>
+                      <input type="text" value="3500" class="order__info-input order__resident-input" readonly>c
                     </div>
-                    <div class="basket__info">
-                      <span>Доставка:</span>
-                      <div class="basket__radios">
-                        <div class="basket__radio">
-                          <input type="radio" id="free" value="0" class="basket__radio-input" name="name" value="0">
-                          <label for="free" class="basket__delivery">Забрать с магазина</label>
-                        </div>
-                        <div class="basket__radio">
-                          <input type="radio" value="200" id="paid" checked="checked" class="basket__radio-input"
-                            name="name">
-                          <label for="paid" class="basket__delivery">Платная доставка: <strong>200</strong> </label>
-                        </div>
-                      </div>
-
-                    </div>
-                    <div class="basket__info">
-                      <span>Общая стоимость:</span> <input type="number" class="basket__total-order" readonly>
-                    </div>
-                    <button type="submit" class="basket__btn-pay">перейти к оплате</button>
                   </div>
-                  
-                </form>
+                </div>
+              </div>
+            </div>
+            <div class="order__pay">
+              <h3 class="order__pay-title">ВЫБЕРИТЕ СПОСОБ ОПЛАТЫ</h3>
+              <div class="order__pay-radios">
+                <span>
+                  <input type="radio" name="order__pay-radio" class="order__pay-radio" checked="checked">
+                  Оплатить при доставке</span>
+                <span>
+                  <input type="radio" name="order__pay-radio" class="order__pay-radio">
+                  Электронные деньги
+                </span>
+                <span>
+                  <input type="radio" name="order__pay-radio" class="order__pay-radio">
+                  Банковской картой
+                </span>
               </div>
 
+              <div class="order__pay-flex">
+                <div class="order__pay-wat">
+                  <div class="order__pay-free">
+                    Вы оплатите заказ при
+                  доставке товара нашим курьером!
+                  </div>
+                </div>
+                <div class="order__pay-total">
+                  <div class="order__pay-summ">
+                    <span class="order__pay-order">Сумма заказа</span>
+                    <div><input type="number" value="24700" readonly>c</div>
+                  </div>
+                  <div class="order__pay-summ">
+                    <span class="order__pay-order">Сумма комиссии</span>
+                    <div><input type="number" value="30" readonly>c</div>
+                  </div>
+                  <div class="order__pay-summ">
+                    <span class="order__pay-order">К оплате</span>
+                    <div><input type="number" value="24730" readonly>c</div>
+                  </div>
+  
+                </div>
+              </div>
+              
 
             </div>
-          </div>
+          </form>
+
         </div>
-    </section>
+      </div>
+    </div>
+
+
 
 
     <section class="footer">

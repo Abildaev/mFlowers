@@ -41,7 +41,7 @@ $(document).ready(function () {
         
         const sign = event.currentTarget.innerHTML;
         if (sign == "+") {        
-            $(this).parent().siblings(".basket__input-amount").val(parseInt($(this).parent().siblings(".basket__input-amount").val()) + 1);
+            $(this).parent().siblings(".basket__input-amount").val(parseInt($(this).parent().siblings(".basket__input-amount").val()) + 1 );
             $(this).parents(".basket__product").find(basketTotal).val(parseInt($(this).parents(".basket__product").find(basketAmount).val() * $(this).parents(".basket__product").find(basketPrice).val()));
         }
          else if (sign == "-") {

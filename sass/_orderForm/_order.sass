@@ -1,0 +1,248 @@
+.order 
+  margin: rem(70px) 0
+
+
+  &__form
+    +laptop
+      display: flex
+      flex-wrap: wrap
+      align-items: flex-start
+      justify-content: space-between
+
+  &__form-wrap
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    +laptop 
+      width: 47%
+
+  &__info
+    +laptop 
+      width: 48%
+
+    p 
+      margin-bottom: rem(50px)
+      line-height: rem(24px)
+      width: 90%
+      color: $basketColorLight
+      +tablet
+        font-size: rem(18px)
+
+
+  &__group
+    margin-bottom: rem(35px)
+    width: 100%
+    &-half
+      +phone
+        width: 48%
+
+  &__wrap
+    background: $whiteColor
+    padding: rem(30px) rem(20px)
+
+    +tablet
+      padding: rem(35px)
+
+
+  &__title
+    color: $titleColor
+    font-size: rem(20px)
+    margin-bottom: rem(35px)
+    +tablet 
+      font-size: rem(24px)
+
+
+  &__input
+    font-size: rem(16px)
+    font-family: $numeralFont
+    display: block
+    width: 100%
+    background: $borderBottomColor
+    border: none
+    box-sizing: border-box
+    padding: rem(15px)
+
+    
+
+  &__label
+    color: $basketColorLight
+    display: block
+    margin-bottom: rem(15px)
+    +tablet 
+      font-size: rem(18px)
+
+    span 
+      color: red
+      font-size: rem(30px)
+      line-height: rem(5px)
+      
+
+  &__message
+    height: rem(265px)
+    resize: none
+    outline: none
+
+  &__info-text
+    h2
+      font-size: rem(16px)
+      text-transform: uppercase
+      color: $titleColor
+      margin-bottom: rem(25px)
+
+  &__info-title
+    font-weight: 600
+    color: $titleColor
+    margin-bottom: rem(15px)
+
+
+
+  &__info-input
+    text-align: right
+    border: none
+    font-family: $numeralFont
+    color: $basketColorLight
+    font-size: rem(18px)
+    +phone
+      display: inline-block
+
+  &__product-name
+    color: $basketColorLight
+    span 
+      font-weight: 600
+      color: $titleColor
+
+  &__product
+    margin-bottom: rem(15px)
+    +phone
+     display: flex
+     justify-content: space-between
+
+  &__resident-input
+    font-weight: 600
+    color: $titleColor
+
+  &__resident
+    margin-bottom: rem(25px)
+    +phone
+      display: flex
+      justify-content: space-between
+    &:last-child
+      margin-bottom: 0
+
+  &__radios
+    +laptop 
+      text-align: right
+
+  &__radio
+    margin-right: rem(8px)
+    width: rem(18px)
+    height: rem(18px)
+
+  &__radio-text
+    color: $basketColorLight
+    display: flex
+    align-items: center
+    margin-bottom: rem(15px)
+    +tablet 
+      margin-left: rem(10px) 
+      display: inline-flex
+      align-items: center
+
+
+  &__products
+    margin-bottom: rem(25px)
+
+
+  &__pay
+    margin-top: rem(40px)
+
+  &__pay-title
+    margin-bottom: rem(35px)
+    font-size: rem(16px)
+    color: $titleColor
+    text-transform: uppercase
+    +phone
+      font-size: rem(18px)
+
+  &__pay-radio
+    width: rem(18px)
+    height: rem(18px)
+    margin-right: rem(8px)
+
+  &__pay-radios
+    display: inline-flex
+    flex-wrap: wrap
+    span
+      display: inline-flex
+      align-items: center
+      color: $basketColorLight
+      margin: 0 rem(15px) rem(15px) 0
+
+
+  &__pay-free
+    color: $basketColorLight
+    font-size: rem(20px)
+    +laptop
+      font-size: rem(24px)
+
+  &__pay-summ:nth-child(odd)
+    background: $borderBottomColor
+
+  &__pay-summ
+    width: 100%
+    display: inline-flex
+    flex-direction: column
+    justify-content: space-between
+    padding: rem(10px) rem(20px)
+    box-sizing: border-box
+    +phone
+      flex-direction: row
+
+    input 
+      font-size: rem(18px)
+      font-weight: 600
+      color: $titleColor
+      margin-right: rem(5px)
+      width: 100%
+      text-align: right
+      background: none
+      font-family: $numeralFont
+      border: none
+
+    div
+      font-family: $numeralFont
+      display: inline-flex
+      align-items: flex-start
+      font-weight: 600
+      color: $titleColor
+      font-size: rem(18px)
+    
+  &__pay-order
+    width: 100%
+    display: block
+    font-size: rem(18px)
+    color: $titleColor
+    font-weight: 600
+
+  &__pay-flex
+    +tablet
+      align-items: center
+      display: flex
+      justify-content: space-between
+
+  &__pay-total
+    +tablet 
+      width: 45%
+
+    +laptop 
+      width: 35%
+
+  &__pay-wat
+    +tablet 
+      width: 45%
+
+
+    
+      
+    

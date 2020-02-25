@@ -43,7 +43,10 @@
           </form>
 
           <div class="header__logo">
-            <img src="./img/mainPage/header/fullLogo.svg" alt="logo">
+            <a href="#">
+              <img src="./img/mainPage/header/fullLogo.svg" alt="logo">
+            </a>
+            
           </div>
           <a href="#" class="header__basket">
             <div class="icon-shopping-bag header__icon-shoping"></div>
@@ -256,15 +259,16 @@
               <h3 class="order__pay-title">ВЫБЕРИТЕ СПОСОБ ОПЛАТЫ</h3>
               <div class="order__pay-radios">
                 <span>
-                  <input type="radio" name="order__pay-radio" class="order__pay-radio" checked="checked">
-                  Оплатить при доставке</span>
-                <span>
-                  <input type="radio" name="order__pay-radio" class="order__pay-radio">
-                  Электронные деньги
+                  <input type="radio" name="order__pay-radio" class="order__pay-radio" id="pay-free">
+                  <label for="pay-free">Оплатить при доставке</label> 
                 </span>
                 <span>
-                  <input type="radio" name="order__pay-radio" class="order__pay-radio">
-                  Банковской картой
+                  <input type="radio" name="order__pay-radio" class="order__pay-radio" id="pay-elmoney">
+                  <label for="pay-elmoney">Электронные деньги</label> 
+                </span>
+                <span>
+                  <input type="radio" name="order__pay-radio" class="order__pay-radio" checked="checked" id="pay-cart">
+                  <label for="pay-cart">Банковской картой</label>  
                 </span>
               </div>
 
@@ -273,6 +277,36 @@
                   <div class="order__pay-free">
                     Вы оплатите заказ при
                   доставке товара нашим курьером!
+                  </div>
+                  
+                  <div class="order__pay-elsom">
+                    <a href="#">
+                      <img src="./img/formPage/elsom.png" alt="#">
+                    </a>
+                  </div>
+                  
+                  <div class="order__pay-cart pay-active">
+                    <div class="order__cart-front">
+                      <div class="order__cart-number">
+                        <label for="cart-name">Номер карты</label>
+                        <input type="number" id="cart-name">
+                      </div>
+                      <div class="order__cart-number order__cart-name">
+                        <label for="cart-name">Имя на карте</label>
+                        <input type="number" id="cart-name">
+                      </div>
+                      <div class="order__cart-number order__cart-date">
+                        <label for="cart-name">срок действия</label>
+                        <input type="number" id="cart-name">
+                      </div>
+                    </div>
+                    <div class="order__cart-back">
+                      <div class="order__cart-line"></div>
+                      <div class="order__cart-cvv">
+                        <label for="cart__cvv">CVV/CVC</label>
+                        <input type="number" id="cart__cvv">
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="order__pay-total">
@@ -288,12 +322,12 @@
                     <span class="order__pay-order">К оплате</span>
                     <div><input type="number" value="24730" readonly>c</div>
                   </div>
-  
+
                 </div>
               </div>
-              
-
+              <button type="submit" class="order__button">оформить заказ</button>
             </div>
+
           </form>
 
         </div>

@@ -192,6 +192,35 @@ $(".store__list-li").click(changeSorting);
 //----------------------------------------------------------------------------------------------
 
 
+$(".order__pay-radio").on("click", function() { 
+    
+    $(this).parents(".order__pay-radios").find(".order__pay-radio").attr("checked", false);
+    $(this).attr("checked", true);
+
+    const payFree = $("#pay-free");
+    const elMoney = $("#pay-elmoney");
+    const cartBank =$("#pay-cart");
+
+    if(payFree.attr("checked")) {
+        $(".order__pay-free").addClass("pay-active");
+        $(".order__pay-elsom").removeClass("pay-active");
+        $(".order__pay-cart").removeClass("pay-active");
+    }
+    else if (elMoney.attr("checked")) {
+        $(".order__pay-free").removeClass("pay-active");
+        $(".order__pay-elsom").addClass("pay-active");
+        $(".order__pay-cart").removeClass("pay-active");
+    }
+    else if (cartBank.attr("checked")) {
+        $(".order__pay-free").removeClass("pay-active");
+        $(".order__pay-elsom").removeClass("pay-active");
+        $(".order__pay-cart").addClass("pay-active");
+    }
+
+    
+    
+});
+
 /// блог все
 
 $(".blogpage__link-acide").click(function (e) {
@@ -199,11 +228,14 @@ $(".blogpage__link-acide").click(function (e) {
     $(".blogpage__link-acide").removeClass("active");
     $(this).addClass("active");
 })
-
-
-
-
 //---------------------------------
+
+
+// форма оплаты
+
+
+
+///--------------------------
 
     $(".products__slider ").owlCarousel({
         loop: true,

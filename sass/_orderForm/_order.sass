@@ -171,6 +171,7 @@
     margin-right: rem(8px)
 
   &__pay-radios
+    margin-bottom: rem(70px)
     display: inline-flex
     flex-wrap: wrap
     span
@@ -226,6 +227,7 @@
     font-weight: 600
 
   &__pay-flex
+    margin-bottom: rem(70px)
     +tablet
       align-items: center
       display: flex
@@ -239,8 +241,141 @@
       width: 35%
 
   &__pay-wat
+    margin-bottom: rem(45px)
     +tablet 
+      margin-bottom: 0
       width: 45%
+
+  &__button
+    transition: 0.5s
+    width: 100%
+    display: block
+    margin-left: auto
+    font-size: rem(16px)
+    font-weight: 600
+    padding: rem(20px) rem(40px)
+    box-sizing: border-box
+    color: $whiteColor
+    border: none
+    background: $titleColor
+    text-transform: uppercase
+    +phone
+      max-width: rem(250px)
+
+  &__button:hover
+    background: $mainColor
+
+      
+
+
+  &__cart-front
+    position: relative
+    z-index: 2
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    padding: rem(30px) rem(10px)
+    box-sizing: border-box
+    background: #bebebe
+    border-radius: rem(20px)
+    width: 100%
+    max-width: rem(360px)
+    margin-bottom: rem(30px)
+
+
+  &__cart-number
+    margin-bottom: rem(25px)
+    width: 100%
+    label
+      font-size: rem(14px)
+      font-weight: 600
+      text-transform: uppercase
+      display: block
+      margin-bottom: rem(10px)
+    input
+      width: 100%
+      border-radius: rem(5px)
+      border: none
+      background: $borderBottomColor
+      padding: rem(10px)
+      box-sizing: border-box
+
+    &:last-child 
+      margin-bottom: 0
+
+  &__cart-name
+    +phone 
+      width: 48%
+      margin-bottom: 0
+
+  &__cart-date
+    +phone 
+      width: 48%
+
+
+  &__pay-cart
+    position: relative
+
+
+  &__cart-back
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    padding: rem(35px) 0 rem(40px)
+    box-sizing: border-box
+    background: #d3d3d3
+    border-radius: rem(20px)
+    width: 100%
+    max-width: rem(360px)
+    +laptop
+      position: absolute
+      top: rem(110px)
+      z-index: 0
+      right: rem(-20px)
+      
+
+
+  &__cart-line
+    margin-bottom: rem(20px)
+    background: #474747
+    width: 100%
+    height: rem(50px)
+
+
+  &__cart-cvv
+    margin: 0 rem(10px) 0 auto
+    width: 40%
+    label
+      font-size: rem(14px)
+      font-weight: 600
+      text-transform: uppercase
+      display: block
+      margin-bottom: rem(10px)
+    input
+      width: 100%
+      border-radius: rem(5px)
+      border: none
+      background: $borderBottomColor
+      padding: rem(10px)
+      box-sizing: border-box
+
+      
+
+
+  &__pay-elsom
+    display: none
+
+
+  &__pay-free
+    display: none
+
+  &__pay-cart
+    display: none
+
+
+.pay-active
+  display: block
+
 
 
     

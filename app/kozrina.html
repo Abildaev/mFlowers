@@ -8,7 +8,14 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps&display=swap" rel="stylesheet">
+    
     <!-- Place favicon.ico in the root directory -->
+    
+    <!-- build:css styles/vendor.css -->
+    <link rel="stylesheet" href="/node_modules/easyzoom/css/easyzoom.css" type="text/css"/>
+    <link rel="stylesheet" href="/node_modules/easyzoom/css/pygments.css" type="text/css"/>
+    <!-- endbuild -->
+
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -368,13 +375,14 @@
       <div class="footer__rights">© 2020 ИП “М-Флаверс”.Все права защищены</div>
     </section>
   </div>
+  <!-- build:js scripts/vendor.js -->
   <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
   <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
   <script  src="/node_modules/easyzoom/dist/easyzoom.js"></script>
-    <!-- endbuild -->
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <!-- endbuild -->
+  <!-- endbuild -->
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
 </body>
 
 </html>
